@@ -1,0 +1,125 @@
+version: "3.1"
+
+intents:
+  - greet
+  - game
+  - inform
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - bots_challenge 
+  - respons
+  - product_list
+  - buynowarticle
+  - post_game
+  - after_game
+  - win
+  - post_win
+  - site
+  - ticket
+  - bot
+  - apologize
+  - wow
+  - not_wow
+
+entities:
+  - choice
+
+slots:
+  choice:
+    type: categorical
+    values:
+      - shangai
+      - beijing
+      - tokyo
+      - new york
+    mappings:
+    - type: from_entity
+      entity: choice
+
+responses:
+  utter_greet:
+  - text: "Your travel agent is here! How are you?"
+
+  utter_happy:
+  - text: "Do you want to book some of our flights?"
+
+  utter_travel:
+  - text: "If you want to book some of our flights click here: http://localhost:4200/product"
+  
+  utter_buynowarticle:
+  - text: "To order, please visit our website: "
+  
+  utter_cheer_up:
+  - text: "You can visit Qatar and watch Fifa World Cup at special, promo price:http://localhost:4200/products/12"
+    image: "http://localhost:4200/assets/images/12.png"
+
+  utter_did_that_help:
+  - text: "Will this flight cheer you up?"
+
+  utter_correct:
+  - text: "That's wonderful! Have a good trip."
+
+  utter_uncorrect:
+  - text: "Oooh, sorry to hear that. You can look for other options on our website:http://localhost:4200/product"
+
+  utter_iamabot:
+  - text: "I am your flight agent. How can I help you?"
+
+  utter_bot:
+  - text: "You can click this link:http://localhost:4200/product"
+
+  utter_profile:
+  - text: "Click the username button in the upper right corner."
+    image: "../assets/skrin1.jpg"
+
+  utter_play:
+  - text: "Which is the largest city in the world?"
+
+  utter_post:
+  - text: "Because this is a game where each customer has only one try. You can play again after 12:00 tommorow."
+
+  utter_after:
+  - text: "Sorry, but this is the rule of the game. We're sorry you didn't qualify for the discount ☹. Hope to see you again."
+
+  utter_goodbye:
+  - text: "Bye, hope to see you again."
+
+  utter_play_again:
+  - text: ""
+
+  utter_winner:
+  - text: "Yes, you won our quiz, and you can enter this code for your flight to get even 30% discount!"
+
+  utter_user:
+  - text: "Thank you for the nice words. We're glad we made you happy today."
+
+  utter_site:
+  - text: "The purpose of this site is selling tickets for last minute flights. Quality service at cheap prices."
+
+  utter_ticket:
+  - text: "Because we only sell last minute tickets."
+
+  utter_dis:
+  - text: "Did you enter your promo code after you put your flight in cart?"
+
+  utter_mis:
+  - text: "Ok, sorry. This is mistake on our behalf. The discount will be added to your account shortly."
+
+  utter_trick:
+  - text: "If you have, you must enter your promo code here."
+    image: "../assets/skrin2.jpg"
+
+  utter_apol:
+  - text: "We apologize once again. Hope to see you again."
+
+actions:
+  - actions_list
+  - action_play_rps 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

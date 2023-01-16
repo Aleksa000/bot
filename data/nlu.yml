@@ -1,0 +1,250 @@
+version: "3.1"
+
+nlu:
+
+- intent: inform
+  examples: |
+    - [shangai](choice)
+    - [beijing](choice)
+    - [tokyo](choice)
+    - [new york](choice)
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+#pitanja korisnika
+- intent: product_list
+  examples: |
+    - Book now
+    - I want to book new flight
+    - book new flight
+    - I want to book new trip
+    - I want to book new jorney
+    - book now
+    - Book new flight
+    - Book
+    - book
+
+#kupi odmah / sada
+- intent: buynowarticle
+  examples: |
+    - Book it
+    - Book
+    - Book now
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - good
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - bad
+    
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - hey are you a flight agent?
+    - hey are you an agent?
+
+- intent: bots_challenge
+  examples: |
+    - how can i book some flight?
+    - how book flight?
+    - how book flight
+    - how can i book some flight
+    - how can i book
+    
+- intent: respons
+  examples: |
+    - how can i change my card or password?
+    - how can change password
+    - how can change card number
+    - how can i change number card
+    - how can i change password
+    - how can change password?
+    - how can change card number?
+    - how can i change number card?
+    - how can i change password?
+    - how can i change my cvs?
+    - how can i change my cvs
+    
+- intent: game
+  examples: |
+    - Do you have a game for me?
+    - Can we play some game?
+    - Can i earn some promo code?
+    - can i earn some discount?
+    - can you give me a discount?
+    - can i earn discount?
+
+- intent: post_game
+  examples: |
+   - How didn't i get it?
+   - How didn't i get it
+   - how didn't i get it?
+   - how didn't i get it
+   - Why didn't i get it?
+   - why didn't i get it
+   - why didn't i get it?
+   - why didn't i get it
+   - Why?
+   - why
+   - why?
+   - how so
+   - how so?
+   - How so?
+   - How so
+
+- intent: after_game
+  examples: |
+   - But i want to play again
+   - but i want to play again
+   - please give me one more chance 
+   - pls gime me one more chance
+
+- intent: win
+  examples: |
+    - wooow i earned a code 
+    - wooow oh my god
+    - wow
+    - ou nice
+    - nice
+    - yeaaa
+    - yeahh
+    - yesss
+    - ouh nice
+
+- intent: post_win
+  examples: |
+   - Great way to use your knowledge.
+   - you are best website for me
+   - thank you agent you are best
+   - I will tell my friends you're the best flight reservation site.
+
+- intent: site
+  examples: |
+    - what is the purpose of this site
+    - what is the purpose of this app
+    - what is the purpose of this site?
+    - what is the purpose of this app?
+    - What is the purpose of this site
+    - What is the purpose of this app
+    - What is the purpose of this site?
+    - What is the purpose of this app?
+
+- intent: ticket
+  examples: |
+   - why are there so few ticket offers on your site?
+   - Why are there so few ticket offers on your site?
+   - why are there so few ticket offers?
+   - Why are there so few ticket offers?
+
+- intent: bot
+  examples: |
+   - Ou man i did not get a discount when paying for the ticket
+   - i did not get a discount
+   - i did not get a discount when paying for the ticket
+   - i did not get a code
+   - i did not get a code when paying for the ticket
+
+- intent: apologize
+  examples: |
+   - ok
+   - ok no problem
+   - Ok
+   - Ok no problem
+
+- intent: wow
+  examples: |
+    - woow this is such a good offer
+    - wooow i love football
+    - i love watching football
+    - I love watching football
+    - incredible
+    - incredible offer 
+    - Woow this is incredible offer
+    - Wooow i love football
+    - Incredible
+    - Incredible offer
+
+- intent: not_wow
+  examples: |
+    - sorry this is nothing special
+    - nothing special
+    - don't like that

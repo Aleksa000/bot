@@ -1,0 +1,110 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: affirm
+  - action: utter_travel
+
+#prica kupaca
+- story: the script
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: product_list #I want to book new travel
+  - action: actions_list #actions.py... kod u akcijama
+  - intent: buynowarticle #book now
+  - action: utter_buynowarticle #za poruzbine > posetiti sajt
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: wow
+  - action: utter_correct
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: not_wow
+  - action: utter_uncorrect
+
+- story: play 
+  steps:
+  - intent: game
+  - action: utter_play
+  - intent: inform
+  - action: action_play_rps
+  - action: utter_play_again
+  - intent: post_game
+  - action: utter_post
+  - intent: after_game
+  - action: utter_after
+
+- story: code
+  steps:
+  - action: utter_play_again
+  - intent: post_game
+  - action: utter_post
+  - intent: after_game
+  - action: utter_after
+
+- story: winner
+  steps:
+  - action: utter_play_again
+  - intent: win
+  - action: utter_winner
+  - intent: post_win
+  - action: utter_user
+
+- story: bot conversation 1
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: bots_challenge 
+  - action: utter_bot
+
+- story: bot conversation 2
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: respons
+  - action: utter_profile
+
+- story: about website
+  steps:
+  - intent: site
+  - action: utter_site
+
+- story: about tickets
+  steps:
+  - intent: ticket
+  - action: utter_ticket
+
+- story: about discount 1 
+  steps:
+  - intent: bot
+  - action: utter_dis
+  - intent: affirm
+  - action: utter_mis
+  - intent: apologize
+  - action: utter_apol
+
+- story: about discount 2
+  steps:
+  - intent: bot
+  - action: utter_dis
+  - intent: deny
+  - action: utter_trick
